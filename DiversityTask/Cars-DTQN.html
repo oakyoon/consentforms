@@ -7,7 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../common/vu-consentform.css">
 	<script>
-		var test_url = "https://oplab.barrios.io/oplab/5d0962a77cfdb4472f02d18a/execute?mode=live&nextType=HIT&nextID=5d546e63f2da89323b9706c7&stimuliFolderID=5d546e63f2da89323b9706c7";
+		var test_url = 'https://oplab.barrios.io/oplab/5d0962a77cfdb4472f02d18a/execute?mode=live&nextType=HIT&nextID=5d644191d7d4c00dff077ea5&stimuliFolderID=5d644191d7d4c00dff077ea5';
+		if (window.location.search.length > 0) {
+			test_url = test_url + (test_url.includes('?') ? '&' : '?') + window.location.search.substring(1);
+		}
 		function accept_clicked() { location.href = test_url; }
 	</script>
 </head>
